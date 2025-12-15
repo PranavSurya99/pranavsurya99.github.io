@@ -10,6 +10,7 @@
 <style>
 :root{
 --bg:#020617;
+--card:#020617;
 --border:#1e293b;
 --text:#e5e7eb;
 --muted:#94a3b8;
@@ -22,31 +23,69 @@ font-family:Inter,system-ui;
 background:var(--bg);
 color:var(--text);
 line-height:1.75;
+scroll-behavior:smooth;
 }
 
 .container{
-max-width:1000px;
+max-width:1100px;
 margin:auto;
 padding:48px 20px;
 }
 
+header{
+display:grid;
+grid-template-columns:1.2fr 0.8fr;
+gap:40px;
+align-items:center;
+margin-bottom:80px;
+}
+
 h1{
-font-size:36px;
-margin-bottom:6px;
+font-size:38px;
 color:var(--accent);
+margin-bottom:10px;
 }
 
 h2{
 color:var(--accent);
-font-size:22px;
-margin-bottom:12px;
+margin-bottom:16px;
+}
+
+p{
+color:var(--text);
+}
+
+small{
+color:var(--muted);
+}
+
+img{
+width:260px;
+border-radius:16px;
+border:1px solid var(--border);
 }
 
 .section{
-margin-top:56px;
-padding:28px;
+margin-top:80px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:24px;
+}
+
+.card{
 border:1px solid var(--border);
 border-radius:16px;
+padding:22px;
+background:linear-gradient(180deg,#020617,#020617);
+transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 40px rgba(56,189,248,.15);
 }
 
 a{
@@ -55,24 +94,7 @@ text-decoration:none;
 font-weight:500;
 }
 
-a:hover{
-text-decoration:underline;
-}
-
-img{
-width:220px;
-border-radius:14px;
-margin-top:20px;
-border:1px solid var(--border);
-}
-
-ul{
-padding-left:20px;
-}
-
-li{
-margin-bottom:10px;
-}
+a:hover{text-decoration:underline}
 
 .badges span{
 display:inline-block;
@@ -83,115 +105,71 @@ border:1px solid var(--border);
 color:var(--muted);
 font-size:13px;
 }
+
+.btn{
+display:inline-block;
+margin-top:14px;
+padding:10px 18px;
+border-radius:10px;
+border:1px solid var(--accent);
+color:var(--accent);
+}
+
+.btn:hover{
+background:rgba(56,189,248,.1);
+}
+
+@media(max-width:900px){
+header{grid-template-columns:1fr}
+}
 </style>
 </head>
 
 <body>
 <div class="container">
 
+<!-- HERO -->
 <header>
+<div>
 <h1>Pranav Surya</h1>
 <p><strong>Public Policy Researcher & M&E Analyst</strong></p>
-<p class="muted">Master’s in Public Policy · IIT Tirupati</p>
+<small>Master’s in Public Policy · IIT Tirupati</small>
+
+<p style="margin-top:18px">
+I work at the intersection of public finance, social protection, urban governance,
+and climate-resilient service delivery. My research combines administrative data,
+field-based analysis, and institutional diagnostics to support evidence-informed
+policy design in developing economy contexts.
+</p>
+
+<a class="btn" href="#publications">View Work</a>
+<a class="btn" href="assets/Pranav_Surya_Resume.pdf" target="_blank">Download CV</a>
+</div>
+
+<div>
 <img src="assets/PranavSurya.png" alt="Pranav Surya">
+</div>
 </header>
 
 <!-- ABOUT -->
-<div class="section">
+<section class="section">
 <h2>About Me</h2>
 <p>
-I am a public policy researcher with academic training and applied experience in
-public finance, social protection, urban governance, and climate-resilient
-service delivery. My work focuses on using data, institutional analysis, and
-field-based insights to improve the design and implementation of public programs
-in developing economy contexts.
+I am currently pursuing a Master’s in Public Policy at IIT Tirupati and hold a
+Bachelor’s degree in Economics (Honours) from Sri Sathya Sai Institute of Higher
+Learning, Prashanthi Nilayam. My academic training has emphasized economic theory,
+statistics, public finance, and applied policy analysis.
 </p>
-
 <p>
-I am currently pursuing a Master’s in Public Policy at the Indian Institute of
-Technology Tirupati. I hold a Bachelor’s degree in Economics (Honours) from
-Sri Sathya Sai Institute of Higher Learning, Prashanthi Nilayam, where I
-developed a strong foundation in economic theory, statistics, and applied policy
-analysis.
+Beyond academics, I value discipline and teamwork. I have represented at the
+state level in yoga and actively engage in policy discussions, debates, and
+development-focused reading.
 </p>
-
-<p>
-Beyond academics, I value discipline, teamwork, and sustained learning. I have
-represented at the state level in yoga and actively participate in policy
-discussions, debates, and development-focused reading.
-</p>
-</div>
-
-<!-- EDUCATION -->
-<div class="section">
-<h2>Education</h2>
-<ul>
-<li>
-<strong>Master of Public Policy</strong><br>
-Indian Institute of Technology Tirupati
-</li>
-<li>
-<strong>B.A. Economics (Honours)</strong><br>
-Sri Sathya Sai Institute of Higher Learning, Prashanthi Nilayam
-</li>
-</ul>
-</div>
-
-<!-- EXPERIENCE -->
-<div class="section">
-<h2>Professional Experience</h2>
-
-<p><strong>Research Intern — Institute for Social and Economic Change (ISEC), Bengaluru</strong></p>
-<p>
-Contributed to the design and evaluation of large-scale climate advisory systems
-under the Varuna Mitra program, impacting over 2.4 million farmers in Karnataka.
-Worked on governance frameworks, monitoring indicators, and institutional
-coordination mechanisms.
-</p>
-
-<p>
-<a href="assets/Varuna_Mitra_Report.pdf" target="_blank">
-Varuna Mitra 2.0 – Climate Advisory Services Report
-</a>
-</p>
-</div>
-
-<!-- PUBLICATIONS -->
-<div class="section">
-<h2>Publications & Major Reports</h2>
-<ul>
-<li>
-<strong>Varuna Mitra 2.0: A Strategic Roadmap for Climate Advisory Services</strong><br>
-<a href="assets/Varuna_Mitra_Report.pdf" target="_blank">View report</a>
-</li>
-</ul>
-</div>
-
-<!-- POLICY BRIEFS -->
-<div class="section">
-<h2>Policy Briefs & Applied Research</h2>
-<ul>
-<li><a href="assets/EPFO_EPS95_Policy_Brief.pdf" target="_blank">EPS-95 Pension Scheme: Fiscal Sustainability</a></li>
-<li><a href="assets/Homelessness_Policy_Brief.pdf" target="_blank">Urban Homelessness in India</a></li>
-<li><a href="assets/PPP_Framework.pdf" target="_blank">Public–Private Partnership Framework</a></li>
-<li><a href="assets/Ebola_Policy_Brief.pdf" target="_blank">Ebola Crisis: Policy Response Analysis</a></li>
-</ul>
-</div>
-
-<!-- ONGOING -->
-<div class="section">
-<h2>Ongoing Research & Policy Work</h2>
-<ul>
-<li>HCES-based consumption and welfare analysis</li>
-<li>City finance diagnostics: Visakhapatnam and Chennai</li>
-<li>The Paradox of Progress: Infrastructure saturation and nutritional lag in Indian districts</li>
-</ul>
-</div>
+</section>
 
 <!-- SKILLS -->
-<div class="section">
+<section class="section">
 <h2>Skills</h2>
-
 <p><strong>Technical</strong></p>
 <div class="badges">
 <span>Program Evaluation</span>
@@ -209,13 +187,81 @@ Varuna Mitra 2.0 – Climate Advisory Services Report
 <span>Policy Writing</span>
 <span>Stakeholder Engagement</span>
 <span>Field Research</span>
-<span>Analytical Reasoning</span>
+<span>Institutional Analysis</span>
 <span>Presentation & Communication</span>
 </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section">
+<h2>Experience</h2>
+
+<div class="card">
+<h3>Research Intern — Institute for Social and Economic Change (ISEC)</h3>
+<p>
+Worked on the Varuna Mitra climate advisory program impacting over 2.4 million
+farmers in Karnataka. Contributed to governance frameworks, monitoring indicators,
+institutional coordination, and policy reporting.
+</p>
+<a href="assets/Varuna_Mitra_Report.pdf" target="_blank">View Report</a>
+</div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications" class="section">
+<h2>Publications & Policy Briefs</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Varuna Mitra 2.0</h3>
+<p>Strategic roadmap for climate advisory services in Karnataka.</p>
+<a href="assets/Varuna_Mitra_Report.pdf" target="_blank">Open PDF</a>
 </div>
 
+<div class="card">
+<h3>EPS-95 Pension Scheme</h3>
+<p>Fiscal sustainability and inflation-adjusted pension analysis.</p>
+<a href="assets/EPFO_EPS95_Policy_Brief.pdf" target="_blank">Open PDF</a>
+</div>
+
+<div class="card">
+<h3>Urban Homelessness</h3>
+<p>Policy brief on housing exclusion and service delivery gaps.</p>
+<a href="assets/Homelessness_Policy_Brief.pdf" target="_blank">Open PDF</a>
+</div>
+
+<div class="card">
+<h3>PPP Framework</h3>
+<p>Analytical framework for public–private partnerships.</p>
+<a href="assets/PPP_Framework.pdf" target="_blank">Open PDF</a>
+</div>
+</div>
+</section>
+
+<!-- ONGOING -->
+<section class="section">
+<h2>Ongoing Research</h2>
+
+<div class="cards">
+<div class="card">
+<h3>HCES Welfare Analysis</h3>
+<p>Consumption and welfare analysis using Household Consumption Expenditure Survey data.</p>
+</div>
+
+<div class="card">
+<h3>City Finance Diagnostics</h3>
+<p>Comparative fiscal analysis of Visakhapatnam and Chennai municipal finances.</p>
+</div>
+
+<div class="card">
+<h3>The Paradox of Progress</h3>
+<p>Spatial analysis of infrastructure saturation and nutritional outcomes across Indian districts.</p>
+</div>
+</div>
+</section>
+
 <!-- CONTACT -->
-<div class="section">
+<section class="section">
 <h2>Contact</h2>
 <p>Email: <a href="mailto:s.pranavsurya@gmail.com">s.pranavsurya@gmail.com</a></p>
 <p>Phone: +91-8125855055</p>
@@ -223,10 +269,7 @@ Varuna Mitra 2.0 – Climate Advisory Services Report
 <a href="https://www.linkedin.com/in/pranav-surya-s/" target="_blank">LinkedIn</a> ·
 <a href="https://github.com/PranavSurya99" target="_blank">GitHub</a>
 </p>
-<p>
-<a href="assets/Pranav_Surya_Resume.pdf" target="_blank">Download CV</a>
-</p>
-</div>
+</section>
 
 </div>
 </body>
