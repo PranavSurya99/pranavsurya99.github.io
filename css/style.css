@@ -167,4 +167,33 @@ color:var(--muted);
 font-size:12px;
 margin-bottom:10px;
 }
+.contact-links{
+display:flex;
+flex-direction:column;
+gap:14px;
+margin-top:14px;
+}
+
+.contact-item{
+display:flex;
+align-items:center;
+gap:12px;
+font-size:15px;
+}
+
+.contact-item svg{
+width:20px;
+height:20px;
+stroke:var(--accent);
+}
+
+.contact-item a{
+color:var(--text);
+text-decoration:none;
+}
+
+.contact-item a:hover{
+color:var(--accent);
+}
+
 
