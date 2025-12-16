@@ -138,3 +138,33 @@ color:var(--muted);
 border-top:1px solid var(--border);
 margin-top:100px;
 }
+/* BUTTONS */
+.btn{
+display:inline-block;
+padding:10px 16px;
+border-radius:10px;
+border:1px solid var(--accent);
+color:var(--accent);
+text-decoration:none;
+font-size:14px;
+margin-top:10px;
+transition:.3s;
+}
+
+.btn:hover{
+background:rgba(56,189,248,.1);
+box-shadow:0 0 12px var(--glow);
+}
+
+/* TAGS */
+.tag{
+display:inline-block;
+padding:4px 10px;
+border-radius:999px;
+background:#020617;
+border:1px solid var(--border);
+color:var(--muted);
+font-size:12px;
+margin-bottom:10px;
+}
+
